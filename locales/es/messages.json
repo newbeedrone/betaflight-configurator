@@ -2632,6 +2632,9 @@
     "firmwareFlasherOptionLabelBuildTypeReleaseCandidate": {
         "message": "Versiones Finales y Versiones Candidatas"
     },
+    "firmwareFlasherOptionLabelBuildTypeReleaseNeeBewDrone": {
+        "message": "NewBeeDrone"
+    },
     "firmwareFlasherOptionLabelBuildTypeDevelopment": {
         "message": "Desarrollo"
     },

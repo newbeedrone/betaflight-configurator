@@ -1991,6 +1991,9 @@
     "firmwareFlasherOptionLabelBuildTypeDevelopment": {
         "message": "Desenvolupament"
     },
+    "firmwareFlasherOptionLabelBuildTypeReleaseNeeBewDrone": {
+        "message": "NewBeeDrone"
+    },
     "firmwareFlasherOptionLabelBuildTypeAKK3_3": {
         "message": "Pedaç 3.3 AKK i RDQ VTX"
     },

@@ -2635,6 +2635,9 @@
     "firmwareFlasherOptionLabelBuildTypeDevelopment": {
         "message": "開発用"
     },
+    "firmwareFlasherOptionLabelBuildTypeReleaseNeeBewDrone": {
+        "message": "NewBeeDrone"
+    },
     "firmwareFlasherOptionLabelBuildTypeAKK3_3": {
         "message": "3.3 AKK & RDQ VTX パッチ"
     },
