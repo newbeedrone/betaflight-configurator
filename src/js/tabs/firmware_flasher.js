@@ -340,15 +340,28 @@ TABS.firmware_flasher.initialize = function (callback) {
                 }
             });
         }
-
+        
         var buildTypes = [
             {
                 tag: 'firmwareFlasherOptionLabelBuildTypeRelease',
-                loader: () => self.releaseChecker.loadReleaseData(releaseData => processBoardOptions(releaseData, false))
+                loader: () => {
+                    self.releaseChecker = new ReleaseChecker('firmware', 'https://api.github.com/repos/betaflight/betaflight/releases');
+                    self.releaseChecker.loadReleaseData(releaseData => processBoardOptions(releaseData, false))
+                }
             },
             {
                 tag: 'firmwareFlasherOptionLabelBuildTypeReleaseCandidate',
-                loader: () => self.releaseChecker.loadReleaseData(releaseData => processBoardOptions(releaseData, true))
+                loader: () =>  {
+                    self.releaseChecker = new ReleaseChecker('firmware', 'https://api.github.com/repos/betaflight/betaflight/releases');
+                    self.releaseChecker.loadReleaseData(releaseData => processBoardOptions(releaseData, true))
+                }
+            },
+            {
+                tag: 'firmwareFlasherOptionLabelBuildTypeReleaseNeeBewDrone',
+                loader: () => {
+                    self.releaseChecker = new ReleaseChecker('newbeedroneFirmware', 'https://api.github.com/repos/newbeedrone/betaflight/releases');
+                    self.releaseChecker.loadReleaseData(releaseData => processBoardOptions(releaseData, false))
+                }
             }
         ];
 
